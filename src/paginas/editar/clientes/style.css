@@ -1,0 +1,5 @@
+.name-fields, .social-gender-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -1,0 +1,63 @@
+main h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 25px 10px;
+    padding: 1rem;
+}
+
+.consumo-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.consumo-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.consumo-card .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.consumo-card h2 {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 20px; /* Adiciona espaço à direita do título */
+}
+
+.consumo-card button {
+    margin-top: 10px;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    .consumo-card .card-body {
+        flex-direction: column;
+    }
+    .consumo-card h2 {
+        font-size: 4vw;
+    }
+}
+
+/* CSS rules for Link component */
+.tables a {
+    color: inherit; /* herda a cor do texto do elemento pai */
+    text-decoration: none; /* remove o sublinhado */
+}
+
+.tables a:hover {
+    color: inherit; /* mantém a cor do texto ao passar o mouse */
+}
