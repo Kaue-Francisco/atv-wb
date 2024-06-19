@@ -1,0 +1,66 @@
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@localhost:3306/salaowb"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Usuario {
+  id              Int              @id @default(autoincrement())
+  nome            String
+  nomeSocial      String?
+  genero          String
+  cpf             String           @unique
+  dataEmissaoCpf  DateTime
+  telefones       Telefone[]
+  rgs             Rg[]
+  produtos        UsuarioProduto[]
+  servicos        UsuarioServico[]
+}
+
+model Telefone {
+  id        Int       @id @default(autoincrement())
+  numero    String
+  usuarioId Int
+  usuario   Usuario   @relation(fields: [usuarioId], references: [id])
+}
+
+model Rg {
+  id             Int      @id @default(autoincrement())
+  numero         String
+  dataEmissao    DateTime
+  usuarioId      Int
+  usuario        Usuario  @relation(fields: [usuarioId], references: [id])
+}
+
+model Produto {
+  id        Int              @id @default(autoincrement())
+  nome      String
+  preco     Float
+  usuarios  UsuarioProduto[]
+}
+
+model Servico {
+  id        Int              @id @default(autoincrement())
+  nome      String
+  preco     Float
+  usuarios  UsuarioServico[]
+}
+
+model UsuarioProduto {
+  id        Int       @id @default(autoincrement())
+  usuarioId Int
+  produtoId Int
+  usuario   Usuario   @relation(fields: [usuarioId], references: [id])
+  produto   Produto   @relation(fields: [produtoId], references: [id])
+}
+
+model UsuarioServico {
+  id        Int       @id @default(autoincrement())
+  usuarioId Int
+  servicoId Int
+  usuario   Usuario   @relation(fields: [usuarioId], references: [id])
+  servico   Servico   @relation(fields: [servicoId], references: [id])
+}

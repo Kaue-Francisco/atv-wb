@@ -1,0 +1,95 @@
+form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px; /* Limite de largura do formulário */
+    width: 100%; /* Garante que o formulário use toda a largura disponível */
+}
+
+.name-fields, .social-gender-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.field input, .field select {
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field input:focus, .field select:focus {
+    background-color: #fff;
+    border: 1px solid #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.name-fields .field, .social-gender-fields .field {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.name-fields .field:last-child, .social-gender-fields .field:last-child {
+    margin-right: 0;
+}
+
+.additional-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.additional-fields .field {
+    width: calc(50% - 10px); /* Dois campos por linha com espaço entre eles */
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.forms {
+    max-width: 600px; /* Fixe a largura máxima */
+    width: 100%; /* Certifique-se de que o formulário use a largura máxima disponível */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 50px;
+    overflow: hidden; /* Prevenir overflow */
+}
+
+.button-group {
+    text-align: center;
+}
+
+.button-group button {
+    margin: 5px;
+}
+
+.campo-rg {
+    background-color: #ff0000;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
