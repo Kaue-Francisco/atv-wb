@@ -1,0 +1,68 @@
+/* CadastroCliente.css */
+
+.form-container {
+    @apply max-w-lg mx-auto p-6 bg-white shadow-md rounded-md;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;;
+}
+
+.form-title {
+    @apply text-2xl font-bold mb-4;
+}
+
+.form-grid {
+    @apply grid grid-cols-1 gap-6;
+}
+
+.form-label {
+    @apply block;
+}
+
+.form-label-text {
+    @apply text-gray-700;
+}
+
+.form-input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    border-radius: 20px;
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+}
+
+.form-input:focus {
+    box-shadow: 10px 10px 8px 4px rgba(103, 112, 220, 0.5);
+    outline: none;
+}
+
+.form-input:hover {
+    box-shadow: 10px 10px 8px 4px rgba(103, 112, 220, 0.5);
+    outline: none;
+}
+
+.submit-button {
+    @apply w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+}
+
+.remove-button {
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.remove-button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-button {
+    background-color: rgb(77, 244, 77);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.add-button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
